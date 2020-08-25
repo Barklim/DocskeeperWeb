@@ -3,7 +3,9 @@ App for keeping business docs :office:
 
 [Web](https://barklim.github.io/DocskeeperWeb/)
 
-[Desktop Version](https://github.com/Barklim/DocskeeperWeb)
+Repository [Desktop Version](https://github.com/Barklim/Docskeeper)
+
+Русская версия [Readme_ru.md](https://github.com/Barklim/DocskeeperWeb/blob/master/README_RU.md)
 
 ## Table of Contents
 
@@ -15,8 +17,6 @@ App for keeping business docs :office:
 - [Meta](#Meta)
 
 ## Info
-
-Русская версия [Readme_ru.md](https://github.com/Barklim/DocskeeperWeb/blob/master/README_RU.md)
 
 A test application for storing and managing documentation.
 
