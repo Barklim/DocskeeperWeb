@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "be8bb6d3881505b365f449fcf45d2d18",
+    "revision": "44314f68bee1c73dbb8d4f529388dd80",
     "url": "/DocskeeperWeb/index.html"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DocskeeperWeb/static/js/3.411e5104.chunk.js"
   },
   {
-    "revision": "f64585081997af75616f",
-    "url": "/DocskeeperWeb/static/js/main.b3855877.chunk.js"
+    "revision": "6cf29ddb446b12bf4df9",
+    "url": "/DocskeeperWeb/static/js/main.1b6543d3.chunk.js"
   },
   {
     "revision": "5798b6b88a3de866aef4",
