@@ -1,37 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.bf1b150a.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.edb045e1.js",
+    "main.js": "/static/js/main.4e723e63.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.f997d0f2.js",
     "static/css/2.d54bb455.chunk.css": "/static/css/2.d54bb455.chunk.css",
-    "static/js/2.aea677df.chunk.js": "/static/js/2.aea677df.chunk.js",
-    "static/js/3.ee2de0a6.chunk.js": "/static/js/3.ee2de0a6.chunk.js",
-    "static/js/4.d788cc76.chunk.js": "/static/js/4.d788cc76.chunk.js",
+    "static/js/2.7ea9e32b.chunk.js": "/static/js/2.7ea9e32b.chunk.js",
+    "static/js/3.c547ceaf.chunk.js": "/static/js/3.c547ceaf.chunk.js",
+    "static/js/4.3eb061f8.chunk.js": "/static/js/4.3eb061f8.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.f40224cdf4e673585c0087864dfc13aa.js": "/precache-manifest.f40224cdf4e673585c0087864dfc13aa.js",
+    "precache-manifest.3340df593bbe7e43a31b6845ea44ad96.js": "/precache-manifest.3340df593bbe7e43a31b6845ea44ad96.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.aea677df.chunk.js.LICENSE.txt": "/static/js/2.aea677df.chunk.js.LICENSE.txt",
-    "static/media/code-analysis.23647416.svg": "/static/media/code-analysis.23647416.svg",
-    "static/media/cra-logo.688761a2.svg": "/static/media/cra-logo.688761a2.svg",
-    "static/media/css.62711730.svg": "/static/media/css.62711730.svg",
-    "static/media/documentation-icon.53fe8376.svg": "/static/media/documentation-icon.53fe8376.svg",
-    "static/media/github-icon.d48d545c.svg": "/static/media/github-icon.d48d545c.svg",
-    "static/media/instant-feedback.fe9b7cf6.svg": "/static/media/instant-feedback.fe9b7cf6.svg",
-    "static/media/intl.16c3fd18.svg": "/static/media/intl.16c3fd18.svg",
-    "static/media/new-window.58ab83f5.svg": "/static/media/new-window.58ab83f5.svg",
-    "static/media/offline-first.0c886a87.svg": "/static/media/offline-first.0c886a87.svg",
-    "static/media/plus-sign.36a9340a.svg": "/static/media/plus-sign.36a9340a.svg",
-    "static/media/route.b4ee8dd2.svg": "/static/media/route.b4ee8dd2.svg",
-    "static/media/rp-logo.186f4a8a.svg": "/static/media/rp-logo.186f4a8a.svg",
-    "static/media/scaffolding.7afe8531.svg": "/static/media/scaffolding.7afe8531.svg",
-    "static/media/seo.b7b5333c.svg": "/static/media/seo.b7b5333c.svg",
-    "static/media/star.fc25d715.svg": "/static/media/star.fc25d715.svg",
-    "static/media/state.722b7fae.svg": "/static/media/state.722b7fae.svg",
-    "static/media/ts.be38d19d.svg": "/static/media/ts.be38d19d.svg"
+    "static/js/2.7ea9e32b.chunk.js.LICENSE.txt": "/static/js/2.7ea9e32b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.edb045e1.js",
+    "static/js/runtime-main.f997d0f2.js",
     "static/css/2.d54bb455.chunk.css",
-    "static/js/2.aea677df.chunk.js",
-    "static/js/main.bf1b150a.chunk.js"
+    "static/js/2.7ea9e32b.chunk.js",
+    "static/js/main.4e723e63.chunk.js"
   ]
 }
