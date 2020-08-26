@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/DocskeeperWeb/static/js/main.1b6543d3.chunk.js",
+    "main.js": "/DocskeeperWeb/static/js/main.8330369b.chunk.js",
     "runtime-main.js": "/DocskeeperWeb/static/js/runtime-main.1bbff5de.js",
     "static/css/2.d54bb455.chunk.css": "/DocskeeperWeb/static/css/2.d54bb455.chunk.css",
     "static/js/2.61bb9cd1.chunk.js": "/DocskeeperWeb/static/js/2.61bb9cd1.chunk.js",
     "static/js/3.411e5104.chunk.js": "/DocskeeperWeb/static/js/3.411e5104.chunk.js",
     "index.html": "/DocskeeperWeb/index.html",
-    "precache-manifest.45e18679f5e8ba6cdcd43833fa8337a8.js": "/DocskeeperWeb/precache-manifest.45e18679f5e8ba6cdcd43833fa8337a8.js",
+    "precache-manifest.598d30d4f5a78394f2c625081fc9b628.js": "/DocskeeperWeb/precache-manifest.598d30d4f5a78394f2c625081fc9b628.js",
     "service-worker.js": "/DocskeeperWeb/service-worker.js",
     "static/js/2.61bb9cd1.chunk.js.LICENSE.txt": "/DocskeeperWeb/static/js/2.61bb9cd1.chunk.js.LICENSE.txt"
   },
@@ -14,6 +14,6 @@
     "static/js/runtime-main.1bbff5de.js",
     "static/css/2.d54bb455.chunk.css",
     "static/js/2.61bb9cd1.chunk.js",
-    "static/js/main.1b6543d3.chunk.js"
+    "static/js/main.8330369b.chunk.js"
   ]
 }
