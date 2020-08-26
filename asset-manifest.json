@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.4e723e63.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.f997d0f2.js",
-    "static/css/2.d54bb455.chunk.css": "/static/css/2.d54bb455.chunk.css",
-    "static/js/2.7ea9e32b.chunk.js": "/static/js/2.7ea9e32b.chunk.js",
-    "static/js/3.c547ceaf.chunk.js": "/static/js/3.c547ceaf.chunk.js",
-    "static/js/4.3eb061f8.chunk.js": "/static/js/4.3eb061f8.chunk.js",
-    "index.html": "/index.html",
-    "precache-manifest.3340df593bbe7e43a31b6845ea44ad96.js": "/precache-manifest.3340df593bbe7e43a31b6845ea44ad96.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.7ea9e32b.chunk.js.LICENSE.txt": "/static/js/2.7ea9e32b.chunk.js.LICENSE.txt"
+    "main.js": "/DocskeeperWeb/static/js/main.4d7075a1.chunk.js",
+    "runtime-main.js": "/DocskeeperWeb/static/js/runtime-main.74c6f31f.js",
+    "static/css/2.d54bb455.chunk.css": "/DocskeeperWeb/static/css/2.d54bb455.chunk.css",
+    "static/js/2.31006d07.chunk.js": "/DocskeeperWeb/static/js/2.31006d07.chunk.js",
+    "static/js/3.c547ceaf.chunk.js": "/DocskeeperWeb/static/js/3.c547ceaf.chunk.js",
+    "static/js/4.3eb061f8.chunk.js": "/DocskeeperWeb/static/js/4.3eb061f8.chunk.js",
+    "index.html": "/DocskeeperWeb/index.html",
+    "precache-manifest.f23b72dda8217956d5d0dc3d182bcfd9.js": "/DocskeeperWeb/precache-manifest.f23b72dda8217956d5d0dc3d182bcfd9.js",
+    "service-worker.js": "/DocskeeperWeb/service-worker.js",
+    "static/js/2.31006d07.chunk.js.LICENSE.txt": "/DocskeeperWeb/static/js/2.31006d07.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f997d0f2.js",
+    "static/js/runtime-main.74c6f31f.js",
     "static/css/2.d54bb455.chunk.css",
-    "static/js/2.7ea9e32b.chunk.js",
-    "static/js/main.4e723e63.chunk.js"
+    "static/js/2.31006d07.chunk.js",
+    "static/js/main.4d7075a1.chunk.js"
   ]
 }
