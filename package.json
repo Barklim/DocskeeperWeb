@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "homepage": "https://barklim.github.io/DocskeeperWeb/",
   "dependencies": {
@@ -68,7 +68,8 @@
     "generate": "cross-env TS_NODE_PROJECT='./internals/ts-node.tsconfig.json' plop --plopfile internals/generators/plopfile.ts",
     "prettify": "prettier --write",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "publish:github": "cross-env PUBLIC_URL='/DocskeeperWeb/' npm run build && gh-pages -d build"
   },
   "browserslist": {
     "production": [
