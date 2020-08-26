@@ -7,7 +7,7 @@
 
 English version [Readme.md](https://github.com/Barklim/DocskeeperWeb/blob/master/README.md)
 
-## Table of Contents
+## Содержание
 
 - [Информация](#информация)
 - [Обратная связь](#обратная-связь)
@@ -41,7 +41,7 @@ English version [Readme.md](https://github.com/Barklim/DocskeeperWeb/blob/master
 ## Сборка
 
 Проект содержит:
-- [react-redux-typescript-boilerplate](https://github.com/rokoroku/react-redux-typescript-boilerplate)
+- [react-boilerplate-cra-template](https://github.com/react-boilerplate/react-boilerplate-cra-template)
 - material ui
 
 ## Мета

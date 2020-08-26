@@ -41,7 +41,7 @@ We are always open to [your feedback](https://github.com/Barklim/DocskeeperWeb/i
 ## Botstrapped
 
 Botstrapped with:
-- [react-redux-typescript-boilerplate](https://github.com/rokoroku/react-redux-typescript-boilerplate)
+- [react-boilerplate-cra-template](https://github.com/react-boilerplate/react-boilerplate-cra-template)
 - material ui
 
 ## Meta
