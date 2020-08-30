@@ -5,6 +5,8 @@
 
 Репозиторий [Десктопная версия](https://github.com/Barklim/Docskeeper)
 
+Репозиторий [Сервера](https://github.com/Barklim/DocskeeperServer)
+
 English version [Readme.md](https://github.com/Barklim/DocskeeperWeb/blob/master/README.md)
 
 ## Содержание
