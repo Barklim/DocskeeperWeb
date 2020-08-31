@@ -1,11 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 import { makeStyles } from '@material-ui/core/styles';
+
+// ---------- Card Form ----------
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
+// ---------- App Bar ----------
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
@@ -15,6 +17,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Badge from '@material-ui/core/Badge';
+
+// ---------- Form TextFields ----------
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -24,6 +28,9 @@ import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
+
+// ---------- Modal ----------
+import Modal from '@material-ui/core/Modal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,9 +62,24 @@ const useStyles = makeStyles((theme) => ({
   checkboxLabel: {
   	width: '100%'
   },
+  paperModal: {
+    position: 'relative',
+    width: 400,
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    top: '30%',
+    // transform: 'translate(0, 100%)',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    fontFamily: "Roboto, Helvetica, Arial"
+  }
 }));
 
 export function HomePage() {
+
+  // ---------- Util Func ----------
 
   const lsAuth = localStorage.getItem('auth');
   const isAuth = !!lsAuth;
@@ -66,10 +88,6 @@ export function HomePage() {
   const [auth, setAuth] = React.useState(isAuth);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setAuth(event.target.checked);
-  };
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -77,20 +95,108 @@ export function HomePage() {
 
   const handleClose = () => {
     setAnchorEl(null);
+    localStorage.removeItem('auth');
+    setAuth(false);
   };
+
+  // ---------- Modal ----------
+
+  const [openModal, setOpenModal] = React.useState(false);
+  const [modalText, setModalText] = React.useState('Что-то пошло не так :(');
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
+  const body = (
+    <div className={classes.paperModal}>
+      <h2 id="simple-modal-title">Ошибка!</h2>
+      <p id="simple-modal-description">
+        {modalText}
+      </p>
+    </div>
+  );
+
+  // ---------- Validation ----------
 
   const [state, setState] = React.useState({
     fioRule: false,
     passRule: false
   });
+  const [name, setName] = React.useState('');
+  const [pass, setPass] = React.useState('');
 
   const handleChangeFio = (event) => {
-    console.log('TEST')
-    console.log()
-    console.log(event)
+    setName(event.target.value);
+    event.target.value ? setState({fioRule: false, passRule: state.passRule}) : setState({fioRule: true, passRule: state.passRule})
   };
 
-  // Simplest without regex & e.t.c.
+  const handleChangePass = (event) => {
+    setPass(event.target.value);
+    event.target.value ? setState({fioRule: state.fioRule, passRule: false}) : setState({fioRule: state.fioRule, passRule: true})
+  };
+
+  // ---------- Form Button Click ----------
+
+  const messageA = 'Неверно заполнены поля имени и пароля';
+  const messageB = 'Неверно заполнено поле имени';
+  const messageC = 'Неверно заполнено поле пароля';
+
+  const handleClick = () => {
+
+    if (name === '' && pass === '') {
+      setState({fioRule: true, passRule: true})
+      setModalText(messageA);
+      setOpenModal(true);
+    } else {
+      if (name === '') {
+        setState({fioRule: true, passRule: state.passRule})
+        setModalText(messageB);
+        setOpenModal(true);
+      } 
+      if (pass === '') {
+        setState({fioRule: state.fioRule, passRule: true})
+        setModalText(messageC);
+        setOpenModal(true);
+      }
+    }
+
+    if(name !== '' && pass !== '') {
+      // hashForCoockie set in cookies
+      const lsAuth = localStorage.setItem('auth', 'true');
+      setAuth(true);
+    }
+
+    // ---------- Request ----------
+
+    // Ругается на fetch тайпскрипт (т.к. асинхронные ф-ции нужно использовать в высокоуровневых компонентах), 
+    // поэтому использую xhr axios проще, поэтому первый вариант для запроса. 
+
+    // let response = fetch('https://my-json-server.typicode.com/Barklim/DocskeeperServer/tables');
+
+    // fetch('https://my-json-server.typicode.com/Barklim/DocskeeperServer/tables')
+    //   .then(response => response.json())
+
+    // let json = response.json();
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://my-json-server.typicode.com/Barklim/DocskeeperServer/tables', false);
+    xhr.send();
+
+    if (xhr.status != 200) {
+      // пример вывода: 404: Not Found
+      setModalText("Ошибка HTTP: " + xhr.status + ': ' + xhr.statusText);
+      setOpenModal(true);
+    } else {
+      alert( xhr.responseText );
+    }
+
+    console.log('TEST')
+    console.log(xhr.responseText)
+  };
 
   return (
     <>
@@ -138,13 +244,24 @@ export function HomePage() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Личный кабинет</MenuItem>
+                <MenuItem>Личный кабинет</MenuItem>
                 <MenuItem onClick={handleClose}>Выйти</MenuItem>
               </Menu>
             </div>
           )}
 	        </Toolbar>
 	      </AppBar>
+
+        <Modal
+          open={openModal}
+          onClose={handleCloseModal}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        >
+          {body}
+        </Modal>
+
+        {!auth && (
 	      <Paper className={classes.paper}>
 	        <Grid container spacing={2}>
 	          <Grid item xs={12} sm container>
@@ -153,23 +270,25 @@ export function HomePage() {
 	                <Typography gutterBottom variant="subtitle1">
 	                  Авторизация
 	                </Typography>
-                  <FormControl fullWidth>
+                  <FormControl variant="outlined" fullWidth>
                     <InputLabel htmlFor="component-error">Имя пользователя</InputLabel>
                     <OutlinedInput 
                       id="fioRule"
-                      error={state.fioRule}
+                      label="Имя пользователя"
                       style={{ marginBottom: 18 }}
-                      onChange={handleChangeFio}
-                      fullWidth />
+                      error={state.fioRule}
+                      value={name}
+                      onChange={handleChangeFio} />
                   </FormControl>
                   <FormControl variant="outlined" fullWidth>
-                    <InputLabel htmlFor="component-outlined">Name</InputLabel>
+                    <InputLabel htmlFor="component-outlined">Пароль</InputLabel>
                     <OutlinedInput
                       id="passRule"
                       label="Пароль"
+                      style={{ marginBottom: 8 }}
                       error={state.passRule}
-                      style={{ marginBottom: 8 }} 
-                      />
+                      value={pass}
+                      onChange={handleChangePass} />
                   </FormControl>
                   <FormControlLabel className={classes.checkboxLabel} control={<Checkbox name="checkedC" />} label="Запомнить меня"  />
                   <Link
@@ -182,7 +301,11 @@ export function HomePage() {
 									>
 									  Забыли пароль?
 									</Link>
-                  <Button variant="contained" color="primary" fullWidth>
+                  <Button 
+                    variant="contained" 
+                    color="primary"
+                    onClick={handleClick}  
+                    fullWidth>
 									  Войти
 								  </Button>
 	              </Grid>
@@ -190,6 +313,7 @@ export function HomePage() {
 	          </Grid>
 	        </Grid>
 	      </Paper>
+        )}
 	    </div>
     </>
   );

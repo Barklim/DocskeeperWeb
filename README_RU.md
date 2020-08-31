@@ -30,19 +30,30 @@ English version [Readme.md](https://github.com/Barklim/DocskeeperWeb/blob/master
 
 Файл в котором вспомогательная информация по разработке, не нужная для [проекта](https://github.com/Barklim/DocskeeperWeb/blob/master/g.md)
 
+#### Examples db.json: 
+
+|         |      login      | password  |
+| :-----: | :-------------: | :-------: |
+|    1    | john@gmail.com  |    34     |
+|    2    | mark@gmail.com  |    33     |
+|    3    | sara@gmail.com  |    23     |
+|    4    | test@test.com   |    35     |
+
+
 ## Обратная связь
 
 Мы всегда открыты для [обратной связи](https://github.com/Barklim/DocskeeperWeb/issues).
 
 ## ToDo
 
+- Нормальная валидация с регулярками и поиск в базе (на клиенте)
 - Регистрация личный кабинет?
 - Прописать роуты
-- Нормальная валидация и поиск в базе на клиенте?)
 - Тестовые логины и пароли таблицу из db.json в readme.md
-- Вынести в лэйаут хедер
+- Лоадер
 - Хэши в куках держать а не в сторадже
 - [color](https://material-ui.com/ru/customization/color/#playground)
+- Вынести в лэйаут хедер
 - Введение в анимацию
 - Сделать desktop ?:)
 
