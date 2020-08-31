@@ -23,7 +23,6 @@ export function App() {
         defaultTitle="React Boilerplate"
       >
         <meta name="description" content="A React Boilerplate application" />
-        <!-- add Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
       </Helmet>
 

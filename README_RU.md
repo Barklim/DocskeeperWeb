@@ -36,7 +36,15 @@ English version [Readme.md](https://github.com/Barklim/DocskeeperWeb/blob/master
 
 ## ToDo
 
-- Страница логинизации
+- Регистрация личный кабинет?
+- Прописать роуты
+- Нормальная валидация и поиск в базе на клиенте?)
+- Тестовые логины и пароли таблицу из db.json в readme.md
+- Вынести в лэйаут хедер
+- Хэши в куках держать а не в сторадже
+- [color](https://material-ui.com/ru/customization/color/#playground)
+- Введение в анимацию
+- Сделать desktop ?:)
 
 ## Требования
 
