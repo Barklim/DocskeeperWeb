@@ -50,6 +50,7 @@ We are always open to [your feedback](https://github.com/Barklim/DocskeeperWeb/i
 ## Reqirements
 
 - node version: v12.14.0
+- yarn: v1.21.1
 
 ## Botstrapped
 

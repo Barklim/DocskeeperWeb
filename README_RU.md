@@ -60,6 +60,7 @@ English version [Readme.md](https://github.com/Barklim/DocskeeperWeb/blob/master
 ## Требования
 
 - версия ноды: v12.14.0
+- yarn: v1.21.1
 
 ## Сборка
 
