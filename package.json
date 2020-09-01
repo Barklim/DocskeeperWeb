@@ -76,7 +76,8 @@
     "deploy": "gh-pages -d build",
     "deploy1": "gh-pages -b master -d build",
     "deploy2": "gh-pages -b gh-pages -d build",
-    "publish:github": "cross-env PUBLIC_URL='/DocskeeperWeb/' npm run build && gh-pages -d build"
+    "publish:github": "cross-env PUBLIC_URL='/DocskeeperWeb/' npm run build && gh-pages -d build",
+    "heroku-postbuild1": "yarn start"
   },
   "browserslist": {
     "production": [
