@@ -30,6 +30,15 @@ Design, prototype [figma](https://www.figma.com/file/Wz0Bu4QdIA2Zj6RYIAlFR8/Docs
 
 File for develop garbage [info](https://github.com/Barklim/DocskeeperWeb/blob/master/g.md)
 
+#### Examples db.json: 
+
+|         |      login      | password  |
+| :-----: | :-------------: | :-------: |
+|    1    | john@gmail.com  |    34     |
+|    2    | mark@gmail.com  |    33     |
+|    3    | sara@gmail.com  |    23     |
+|    4    | test@test.com   |    35     |
+
 ## Sending Feedback
 
 We are always open to [your feedback](https://github.com/Barklim/DocskeeperWeb/issues).

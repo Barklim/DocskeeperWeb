@@ -24,6 +24,7 @@ export function App() {
       >
         <meta name="description" content="A React Boilerplate application" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
       </Helmet>
 
       <Switch>

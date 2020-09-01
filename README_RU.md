@@ -30,7 +30,7 @@ English version [Readme.md](https://github.com/Barklim/DocskeeperWeb/blob/master
 
 Файл в котором вспомогательная информация по разработке, не нужная для [проекта](https://github.com/Barklim/DocskeeperWeb/blob/master/g.md)
 
-#### Examples db.json: 
+#### Пример db.json: 
 
 |         |      login      | password  |
 | :-----: | :-------------: | :-------: |

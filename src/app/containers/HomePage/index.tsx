@@ -32,6 +32,9 @@ import InputLabel from '@material-ui/core/InputLabel';
 // ---------- Modal ----------
 import Modal from '@material-ui/core/Modal';
 
+// ---------- Material ----------
+import { MaterialTableDemo } from './../../components/MaterialTableDemo/index';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -95,6 +98,9 @@ export function HomePage() {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const handleExit = () => {
+    setAnchorEl(null);
     localStorage.removeItem('auth');
     setAuth(false);
   };
@@ -144,6 +150,11 @@ export function HomePage() {
   const messageA = 'Неверно заполнены поля имени и пароля';
   const messageB = 'Неверно заполнено поле имени';
   const messageC = 'Неверно заполнено поле пароля';
+  const messageD = 'Такого пользователя не существует';
+  const messageE = '(-_-) Вы успешно зарегестрировались! \n 🎉';
+
+  // let getTableResponse = [];
+  const [getTableResponse, setTableResponse] = React.useState([]);
 
   const handleClick = () => {
 
@@ -164,13 +175,19 @@ export function HomePage() {
       }
     }
 
-    if(name !== '' && pass !== '') {
-      // hashForCoockie set in cookies
-      const lsAuth = localStorage.setItem('auth', 'true');
-      setAuth(true);
+    const isLogged = function() {
+
+      if(name !== '' && pass !== '') {
+        // hashForCoockie set in cookies
+        const lsAuth = localStorage.setItem('auth', 'true');
+        setAuth(true);
+
+        setModalText(messageE);
+        setOpenModal(true);
+      }
     }
 
-    // ---------- Request ----------
+    // ---------- Requests ----------
 
     // Ругается на fetch тайпскрипт (т.к. асинхронные ф-ции нужно использовать в высокоуровневых компонентах), 
     // поэтому использую xhr axios проще, поэтому первый вариант для запроса. 
@@ -182,20 +199,56 @@ export function HomePage() {
 
     // let json = response.json();
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://my-json-server.typicode.com/Barklim/DocskeeperServer/tables', false);
-    xhr.send();
+    const sucessAuth = false;
+    let getUsersResponse = [];
+    // let getTableResponse = [];
 
-    if (xhr.status != 200) {
-      // пример вывода: 404: Not Found
-      setModalText("Ошибка HTTP: " + xhr.status + ': ' + xhr.statusText);
-      setOpenModal(true);
-    } else {
-      alert( xhr.responseText );
+    const getTable = function() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://my-json-server.typicode.com/Barklim/DocskeeperServer/tables', false);
+      xhr.send();
+
+      if (xhr.status != 200) {
+        // пример вывода: 404: Not Found
+        setModalText("Ошибка HTTP: " + xhr.status + ': ' + xhr.statusText);
+        setOpenModal(true);
+      } else {
+        // alert( xhr.responseText );
+        const getTableResponse1 = JSON.parse(xhr.responseText);
+        setTableResponse(getTableResponse1);
+      }
+    }
+    const authRequest = function() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://my-json-server.typicode.com/Barklim/DocskeeperServer/users?email=' + name, false);
+      xhr.send();
+
+      if (xhr.status != 200) {
+        // пример вывода: 404: Not Found
+        setModalText("Ошибка HTTP: " + xhr.status + ': ' + xhr.statusText);
+        setOpenModal(true);
+      } else {
+        getUsersResponse = JSON.parse(xhr.responseText);
+      }
     }
 
-    console.log('TEST')
-    console.log(xhr.responseText)
+    const doRequest = function() {
+      authRequest();
+      getTable();
+    }
+
+    if(name !== '' && pass !== '') {
+      doRequest();
+
+      if(getUsersResponse.length !== 1) {
+        setModalText(messageD);
+        setOpenModal(true);
+      }
+    }
+
+    if (getUsersResponse.length === 1) {
+      isLogged()
+    }
   };
 
   return (
@@ -245,7 +298,7 @@ export function HomePage() {
                 onClose={handleClose}
               >
                 <MenuItem>Личный кабинет</MenuItem>
-                <MenuItem onClick={handleClose}>Выйти</MenuItem>
+                <MenuItem onClick={handleExit}>Выйти</MenuItem>
               </Menu>
             </div>
           )}
@@ -314,6 +367,11 @@ export function HomePage() {
 	        </Grid>
 	      </Paper>
         )}
+
+        {auth && (
+          <MaterialTableDemo tableData={getTableResponse}/>
+        )}
+
 	    </div>
     </>
   );
