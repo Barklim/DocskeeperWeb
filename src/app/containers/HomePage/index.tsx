@@ -200,41 +200,26 @@ export function HomePage() {
     // let json = response.json();
 
     const sucessAuth = false;
-    let getUsersResponse = [];
-    // let getTableResponse = [];
-
-    const getTable = function() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'https://my-json-server.typicode.com/Barklim/DocskeeperServer/tables', false);
-      xhr.send();
-
-      if (xhr.status != 200) {
-        // пример вывода: 404: Not Found
-        setModalText("Ошибка HTTP: " + xhr.status + ': ' + xhr.statusText);
-        setOpenModal(true);
-      } else {
-        // alert( xhr.responseText );
-        const getTableResponse1 = JSON.parse(xhr.responseText);
-        setTableResponse(getTableResponse1);
+    let getUsersResponse = [
+      {
+        "id": "1",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@gmail.com",
+        "age": 34,
+        "companyId": "1",
+        "role": "admin"
       }
-    }
-    const authRequest = function() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'http://my-json-server.typicode.com/Barklim/DocskeeperServer/users?email=' + name, false);
-      xhr.send();
+    ];
 
-      if (xhr.status != 200) {
-        // пример вывода: 404: Not Found
-        setModalText("Ошибка HTTP: " + xhr.status + ': ' + xhr.statusText);
-        setOpenModal(true);
-      } else {
-        getUsersResponse = JSON.parse(xhr.responseText);
-      }
-    }
+    // Запросы с github-pages не идут, а в хероку проблемы с сервером.
+
+
 
     const doRequest = function() {
-      authRequest();
-      getTable();
+      // authRequest();
+      // getTable();
+      // setTableResponse(dbTable); ?      
     }
 
     if(name !== '' && pass !== '') {
