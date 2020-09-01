@@ -2,7 +2,8 @@
   "name": "my-app",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://barklim.github.io/DocskeeperWeb/",
+  "homepage1": "https://barklim.github.io/DocskeeperWeb/",
+  "homepage": "https://barklim.github.io/docskeeperweb/",
   "dependencies": {
     "@material-ui/core": "4.11.0",
     "@material-ui/icons": "4.9.1",
@@ -71,9 +72,10 @@
     "lint:css": "stylelint src/**/*.css",
     "generate": "cross-env TS_NODE_PROJECT='./internals/ts-node.tsconfig.json' plop --plopfile internals/generators/plopfile.ts",
     "prettify": "prettier --write",
-    "predeploy": "yarn build",
+    "predeploy1": "yarn build",
     "deploy": "gh-pages -d build",
     "deploy1": "gh-pages -b master -d build",
+    "deploy2": "gh-pages -b gh-pages -d build",
     "publish:github": "cross-env PUBLIC_URL='/DocskeeperWeb/' npm run build && gh-pages -d build"
   },
   "browserslist": {
