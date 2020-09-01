@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "115c15726991fec67ff12386c7f0610f",
+    "revision": "90d3aacde06395793da2f2a54bd4cfb2",
     "url": "/docskeeperweb/index.html"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/docskeeperweb/static/js/3.5bcfac70.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d1916d4e3058519e0512",
-    "url": "/docskeeperweb/static/js/4.299c3932.chunk.js"
+    "revision": "457df2c60c67828690c6",
+    "url": "/docskeeperweb/static/js/4.8c983334.chunk.js"
   },
   {
     "revision": "9e16d1e76e42985a69c3",
@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/docskeeperweb/static/js/main.8cf79202.chunk.js"
   },
   {
-    "revision": "8c5f0bf38d9bd9d6b418",
-    "url": "/docskeeperweb/static/js/runtime-main.8b231bcd.js"
+    "revision": "a994bec002ac01bb0611",
+    "url": "/docskeeperweb/static/js/runtime-main.0c477be7.js"
   }
 ]);
