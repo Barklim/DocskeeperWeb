@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/docskeeperweb/static/js/main.8cf79202.chunk.js",
-    "runtime-main.js": "/docskeeperweb/static/js/runtime-main.2bfcf8c6.js",
-    "static/css/2.d54bb455.chunk.css": "/docskeeperweb/static/css/2.d54bb455.chunk.css",
-    "static/js/2.18aeedf4.chunk.js": "/docskeeperweb/static/js/2.18aeedf4.chunk.js",
-    "static/js/3.5bcfac70.chunk.js": "/docskeeperweb/static/js/3.5bcfac70.chunk.js",
-    "static/js/4.d8186c22.chunk.js": "/docskeeperweb/static/js/4.d8186c22.chunk.js",
-    "static/js/5.0bab0f25.chunk.js": "/docskeeperweb/static/js/5.0bab0f25.chunk.js",
-    "index.html": "/docskeeperweb/index.html",
-    "precache-manifest.1814d5491477fd76acbad9802e89d34c.js": "/docskeeperweb/precache-manifest.1814d5491477fd76acbad9802e89d34c.js",
-    "service-worker.js": "/docskeeperweb/service-worker.js",
-    "static/js/2.18aeedf4.chunk.js.LICENSE.txt": "/docskeeperweb/static/js/2.18aeedf4.chunk.js.LICENSE.txt",
-    "static/js/3.5bcfac70.chunk.js.LICENSE.txt": "/docskeeperweb/static/js/3.5bcfac70.chunk.js.LICENSE.txt"
+    "main.js": "/DocskeeperWeb/static/js/main.3d55d440.chunk.js",
+    "runtime-main.js": "/DocskeeperWeb/static/js/runtime-main.08bcdf59.js",
+    "static/css/2.d54bb455.chunk.css": "/DocskeeperWeb/static/css/2.d54bb455.chunk.css",
+    "static/js/2.1b7d1b34.chunk.js": "/DocskeeperWeb/static/js/2.1b7d1b34.chunk.js",
+    "static/js/3.5bcfac70.chunk.js": "/DocskeeperWeb/static/js/3.5bcfac70.chunk.js",
+    "static/js/4.d8186c22.chunk.js": "/DocskeeperWeb/static/js/4.d8186c22.chunk.js",
+    "static/js/5.0bab0f25.chunk.js": "/DocskeeperWeb/static/js/5.0bab0f25.chunk.js",
+    "index.html": "/DocskeeperWeb/index.html",
+    "precache-manifest.1ce827b19e461c2935132f5c1eba58da.js": "/DocskeeperWeb/precache-manifest.1ce827b19e461c2935132f5c1eba58da.js",
+    "service-worker.js": "/DocskeeperWeb/service-worker.js",
+    "static/js/2.1b7d1b34.chunk.js.LICENSE.txt": "/DocskeeperWeb/static/js/2.1b7d1b34.chunk.js.LICENSE.txt",
+    "static/js/3.5bcfac70.chunk.js.LICENSE.txt": "/DocskeeperWeb/static/js/3.5bcfac70.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2bfcf8c6.js",
+    "static/js/runtime-main.08bcdf59.js",
     "static/css/2.d54bb455.chunk.css",
-    "static/js/2.18aeedf4.chunk.js",
-    "static/js/main.8cf79202.chunk.js"
+    "static/js/2.1b7d1b34.chunk.js",
+    "static/js/main.3d55d440.chunk.js"
   ]
 }
